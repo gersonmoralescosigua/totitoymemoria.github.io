@@ -1,0 +1,28 @@
+<!DOCTYPE html>               <!-- indica que es una pagina web y establece el idioma de la pagina -->
+
+<html lang="es">
+<head>             <!-- recursos de la pagina  -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">          <!-- permite caracteres especiales, ajustando pantallas para distintos tipos -->
+    <title>Juego de Bienvenida</title>            <!--Titulo de la página -->
+    <link rel="stylesheet" href="css/main.css">    <!-- Enlace a una hoja de estilo externa en la carpeta-->
+</head>
+<body>    <!-- comienza la seccion principal del contenido visible de la pagina -->
+    <audio id="background-music" loop autoplay>     <!-- Inserta un reproductor de audio que se reproduce automaticamente -->
+        <source src="assets/audios/Kung Fu Fighting (Celebration Time)(MP3_160K).mp3" type="audio/mpeg">   <!-- especifica el archivo de audio en formato MP3 -->
+    </audio>
+
+    <div class="container">   <!-- Organiza los elementos dentro de la pagina  -->
+        <h1 class="welcome-text">¡BIENVENIDO AL MUNDO DE KUNG FU PANDA!</h1>          <!-- Titulo principal de la pagina con la clase -->
+        <div class="game-selection">    <!--Otro contenedor para organizar los botones de seleccion de juego -->
+          <button onclick="location.href='memoria.html'">Juego de Memoria</button>        <!--Redirige a la pantalla juego de memoria -->
+          <button onclick="location.href='totito.html'">Juego de Totito</button>
+          <button onclick="exitGame()">Salir</button> <!-- Botón para salir -->
+          <h3 >¡Hecho por Gerson Morales y Zulema Menchú!</h3>
+            
+        </div>
+    </div>
+    <script src="js/main.js"></script>   <!-- este codigo vincula un archivo llamado main.js ubicado en la carpeta js.  -->
+</body>
+</html>

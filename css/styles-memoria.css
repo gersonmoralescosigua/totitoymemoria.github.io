@@ -1,0 +1,192 @@
+body {
+    background-image: url('../assets/images/artwork\ (1).png');
+    background-size: cover;
+    font-family: 'Poppins', sans-serif; /* Fuente más profesional */
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+    color: white;
+    font-weight: bold; /* Hacer el texto negrita */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar horizontalmente */
+    margin-top: 20px;
+}
+
+.card {
+    width: 4cm; /* Ancho de 5 cm */
+    height: 4cm; /* Alto de 5 cm */
+    margin: 0.5cm; /* Margen de 1 cm (0.5 cm a cada lado) */
+    background-color: #0d2d31;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: transparent;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.card.flipped {
+    background-color: #fff;
+    color: #333;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+.card.glow {
+    animation: glow-animation 0.5s ease-in-out infinite alternate; /*Velocidad de brillo*/
+}
+
+@keyframes glow-animation {
+    20% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px #00ffff;
+    }
+}
+
+/* Neon light button styles for all buttons */
+button {
+    padding: 15px 30px; /* Tamaño del botón */
+    margin: 10px; /* Espaciado entre botones */
+    font-size: 18px; /* Tamaño del texto */
+    cursor: pointer; /* Mostrar cursor al pasar */
+    border: 3px solid #82c6ec; /* Borde neon azul claro */
+    background-color: transparent; /* Sin fondo */
+    color: #f5f6f7; /* Color del texto neon */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+    font-weight: bold; /* Texto en negrita */
+    position: relative; /* Para los efectos neon */
+    box-shadow: 0 0 10px #06021b, 0 0 20px #06021b, 0 0 40px #06021b, 0 0 80px #06021b; /* Resplandor */
+    transition: 0.5s; /* Transición suave */
+    border-radius: 5px; /* Bordes redondeados */
+    overflow: hidden;
+  }
+  
+  /* Neon light animation */
+  button:hover {
+    color: #fff; /* Cambiar color del texto al pasar */
+    background-color: rgba(34, 34, 34, 0.7); /* Fondo oscuro semitransparente */
+    box-shadow: 0 0 20px #82c6ec, 0 0 30px #82c6ec, 0 0 50px #82c6ec, 0 0 100px #82c6ec; /* Aumentar resplandor al pasar */
+    transform: scale(1.05); /* Agrandar ligeramente el botón */
+  }
+  
+  /* Animación para la luz de neón */
+  @keyframes neonFlicker {
+    0%, 100% {
+      box-shadow: 0 0 10px #82c6ec, 0 0 20px #82c6ec, 0 0 40px #82c6ec, 0 0 80px #82c6ec;
+    }
+    50% {
+      box-shadow: 0 0 5px #82c6ec, 0 0 10px #82c6ec, 0 0 20px #82c6ec, 0 0 40px #82c6ec;
+    }
+  }
+  
+  button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #82c6ec 20%, transparent 20%);
+    background-size: 50% 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  
+  button:hover::before {
+    opacity: 0.2;
+    transform: scale(1.2);
+  }
+  
+
+/* Estilo del texto de bienvenida con efecto glowing tubelight */
+.welcome-text {
+    font-size: 4rem; /* Tamaño de fuente grande */
+    color: #f2f6fa; /* Color blanco */
+    font-family: 'Poppins', sans-serif; /* Fuente más profesional */
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+    font-weight: bold; /* Hacer el texto negrita */
+    letter-spacing: 3px; /* Espaciado entre letras */
+    position: relative; /* Para las animaciones */
+    animation: glowingText 2.5s ease-in-out infinite; /* Animación glowing tubelight */
+    text-shadow: 0 0 10px #82b9ec, 0 0 20px #82c6ec, 0 0 30px #82c6ec, 0 0 40px #82c6ec; /* Resplandor inicial */
+  }
+  
+  /* Animación del texto con efecto glowing tubelight */
+  @keyframes glowingText {
+    0% {
+      text-shadow: 0 0 5px #06021b, 0 0 10px #06021b, 0 0 20px #06021b, 0 0 40px #06021b;
+      opacity: 0.7;
+    }
+    50% {
+      text-shadow: 0 0 10px #06021b, 0 0 20px #06021b, 0 0 30px #06021b, 0 0 50px #06021b;
+      opacity: 0.9;
+    }
+    100% {
+      text-shadow: 0 0 5px #06021b, 0 0 10px #06021b, 0 0 20px #06021b, 0 0 40px #06021b;
+      opacity: 0.7;
+    }
+  }
+
+  /* Estilo del texto de parrafo con efecto glowing tubelight */
+.welcome-pa {
+    font-size: 1rem; /* Tamaño de fuente grande */
+    color: #040f13; /* Color blanco */
+    font-family: 'Poppins', sans-serif; /* Fuente más profesional */
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+    font-weight: bold; /* Hacer el texto negrita */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    position: relative; /* Para las animaciones */
+    text-shadow: 0 0 10px #82b9ec, 0 0 20px #82c6ec, 0 0 30px #82c6ec, 0 0 40px #82c6ec; /* Resplandor inicial */
+  }
+
+  /* Estilo para las estrellas */
+.star {
+  position: absolute;
+  top: -10px; /* Comienzan fuera de la pantalla */
+  width: 6px; /* Ancho de la estrella */
+  height: 3px; /* Alto de la estrella */
+  background: rgba(255, 255, 255, 0.8); /* Color de la estrella */
+  border-radius: 50%; /* Hacerla redonda */
+  opacity: 0; /* Iniciar invisible */
+  animation: fall linear forwards; /* Animación de caída */
+}
+
+/* Animación de caída de las estrellas */
+@keyframes fall {
+  0% {
+      transform: translateY(0); /* Comienza en la parte superior */
+      opacity: 1; /* Se vuelve visible */
+  }
+  100% {
+      transform: translateY(100vh); /* Se desplaza hasta la parte inferior de la pantalla */
+      opacity: 0; /* Se desvanece al final */
+  }
+}

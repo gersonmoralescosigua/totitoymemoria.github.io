@@ -1,0 +1,26 @@
+<!DOCTYPE html>         
+<html lang="es">
+<head>                       
+    <meta charset="UTF-8">   <!--soporta todos los caracteres especiales -->  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!-- para que se adhiera al ancho del dispositivo -->  
+    <title>Juego de Memoria</title>     <!--Titulo que aparecera en la pagina web -->  
+    <link rel="stylesheet" href="css/styles-memoria.css">    <!--vincula una hoja exxterna llamada styles-memoria.css, que se encuentra ene l formato css -->  
+</head>
+<body>    <!-- se empieza a ver el codigo de la pagina -->  
+    <audio id="background-music" loop autoplay>   <!-- inserta un audio que se reproduce automaticamente -->  
+        <source src="assets/audios/Kung Fu Panda 3 Soundtrack 01 Oogway_s Legacy_ Hans Zimmer(MP3_160K).mp3" type="audio/mpeg">
+    </audio>       <!--Especifica la ubicacion del archivo de audio y el formato del mismo -->  
+
+    <div class="container">    <!-- ayuda para aplicaar estilos de css y organizar los elementos dentro de la pagina -->  
+        <h1 class="welcome-text">Juego de Memoria</h1>   <!--Muestra el titulo del juego  -->  
+        <p class="welcome-pa">Instrucciones: Encuentra las parejas de imágenes antes de que se acabe el tiempo. Tienes 10 minutos.</p>     <!--Un parrafo con isntrucciones para el juego -->  
+        <button id="startBtn">Comenzar Juego</button>    <!-- un boton para iniciar el juego -->  
+        <div id="timer" class="hidden">Tiempo restante: <span id="time">600</span> segundos</div>     <!--Muestra el tiempo del juego y el tiempo en segundos -->  
+        <div id="cardsContainer" class="hidden"></div>    <!--un contenedor vacio dnd se muestran las cartas del juego -->  
+        <div id="result" class="hidden"></div>      <!--un contenedor vacio para mostrar los resultados del juego -->  
+        <button id="restartBtn" class="hidden">Jugar de nuevo</button>    <!--un boton para reiniciar el juego -->  
+        <button id="exitBtn" onclick="exitGame()">Regresar</button>        <!--un boton para salir del juego-->  
+    </div>
+    <script src="js/script-memoria.js"></script>
+</body>
+</html>

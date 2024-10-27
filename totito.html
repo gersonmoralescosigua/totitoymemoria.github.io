@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!--Para se ajuste a cualquier pantalla del dispositivo -->
+    <title>Juego de Totito</title>
+    <link rel="stylesheet" href="css/styles-totito.css">
+</head>
+<body>
+    <body>       <!--contiene el contenido visible de la pagina web-->
+        <audio id="background-music" loop autoplay>  <!--reeproduce automaticamente la musica de fondo -->
+            <source src="assets/audios/01. Hero - Hans Zimmer (Kung Fu Panda Soundtrack)(MP3_160K).mp3" type="audio/mpeg">
+        </audio>   <!--Especifica el archivo de audio que se reproducirá-->
+
+    <div class="container">       <!-- contenedor en donde los elementos del juego utiliazan la clase container en el archivo css -->
+        <h1 class="welcome-text">Juego de Totito</h1>   <!--Titulo de juego-->
+        
+        <!-- Pantalla para ingresar nombres -->
+        <div id="playerNames">     <!--contenedor para qe los jugadores ingresen su nombre -->
+            <input type="text" id="nameX" placeholder="Nombre Jugador X" required>   <!--Campo de texto para que ingreesen su nombre -->
+            <input type="text" id="nameO" placeholder="Nombre Jugador O" required>    <!--campo de texto para que ingresen su nombre-->
+            <button id="startButton">Comenzar Juego</button>                         
+            <button id="exitButton">Regresar</button>
+        </div>
+
+        <!-- Pantalla para elegir quién comienza -->
+        <div id="whoStarts" class="hidden">
+            <button id="startX">Jugador X comienza</button>
+            <button id="startO">Jugador O comienza</button>
+        </div>
+
+        <div id="timer" class="hidden">Tiempo total: <span id="time">0</span> segundos</div>    <!--Contenedor para mmostrar el tiempo transcurrido en el juego -->
+        <div id="turnMessage" class="hidden"></div>     <!--contenedor vacio que mostrará mensajes sobre quien le toca jugar -->
+        <div id="gameBoard" class="hidden"></div>       <!--contenedor para mostrar el tablero -->
+        <div id="result" class="hidden"></div>          <!--contenedor donde se mostrará el resultado -->
+        <button id="restartButton" class="hidden">Reiniciar Juego</button>    <!--boton para reiniciar el juego -->
+    </div>
+    <script src="js/script-totito.js"></script>   <!--donde se ubica la logica del juego y las funciones del tablero, turnos etc. -->
+</body>
+</html>
+
+
+
